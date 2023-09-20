@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "models-compression"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+notebook = "^7.0.3"
+torch = { version = "2.0.1", source = "torch-cuda-11-7" }
+torchvision = { version = "0.15.2", source = "torch-cuda-11-7" }
+numpy = "^1.26.0"
+sympy = "^1.12"
+pillow = "^10.0.1"
+tqdm = "^4.66.1"
+timm = "^0.9.7"
+matplotlib = "^3.8.0"
+
+[[tool.poetry.source]]
+name = "torch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+priority = "explicit"
+
+[[tool.poetry.source]]
+name = "torch-cuda-11-7"
+url = "https://download.pytorch.org/whl/cu117"
+priority = "explicit"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
